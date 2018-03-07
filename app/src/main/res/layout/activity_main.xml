@@ -5,12 +5,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="me.yamsafer.android_team.yamsafer_workshop.MainActivity">
+    tools:context="me.yamsafer.android_team.yamsafer_workshop.activity.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/message_container"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello BZU! Yamsafer workshop"
-        android:layout_centerInParent="true"/>
+        android:id="@+id/message_container"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
 
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_id"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/send_button_id"
+            android:text="Send"/>
+
+    </LinearLayout>
 </RelativeLayout>

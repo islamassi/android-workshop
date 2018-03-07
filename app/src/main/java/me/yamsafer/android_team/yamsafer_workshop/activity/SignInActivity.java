@@ -1,4 +1,4 @@
-package me.yamsafer.android_team.yamsafer_workshop;
+package me.yamsafer.android_team.yamsafer_workshop.activity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -22,6 +22,8 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import me.yamsafer.android_team.yamsafer_workshop.R;
 
 public class SignInActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
 
