@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "518430526449",
+    "firebase_url": "https://yamsafer-workshop-2018-chat.firebaseio.com",
+    "project_id": "yamsafer-workshop-2018-chat",
+    "storage_bucket": "yamsafer-workshop-2018-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518430526449:android:b5d75907de594a2d",
+        "android_client_info": {
+          "package_name": "com.google.firebase.codelab.friendlychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518430526449-673duqlqk0keg9ji7u2gnlh9t30at338.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.codelab.friendlychat",
+            "certificate_hash": "2a1c504e47ef0e593aa48d577bf7fc70675e3b0b"
+          }
+        },
+        {
+          "client_id": "518430526449-uopl6avs7t2bn1r6tq54a2kg3vp6ha58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZrelBMA-inonex-C1zg8loUWMLAyPNlQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518430526449-uopl6avs7t2bn1r6tq54a2kg3vp6ha58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518430526449:android:179ea97621e670ce",
+        "android_client_info": {
+          "package_name": "me.yamsafer.android_team.yamsafer_workshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518430526449-phnmi046abk4bovci2ltkp0l5ag6dcqi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.yamsafer.android_team.yamsafer_workshop",
+            "certificate_hash": "2a1c504e47ef0e593aa48d577bf7fc70675e3b0b"
+          }
+        },
+        {
+          "client_id": "518430526449-uopl6avs7t2bn1r6tq54a2kg3vp6ha58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZrelBMA-inonex-C1zg8loUWMLAyPNlQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518430526449-uopl6avs7t2bn1r6tq54a2kg3vp6ha58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
