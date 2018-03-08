@@ -15,7 +15,12 @@ public class UserMessage {
     private String photoUrl;
 
 
-    public UserMessage( String text, String name, String photoUrl) {
+    public UserMessage() {
+
+    }
+
+
+    public UserMessage(String text, String name, String photoUrl) {
 
         this.text = text;
         this.name = name;

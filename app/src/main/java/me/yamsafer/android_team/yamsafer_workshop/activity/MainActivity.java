@@ -3,16 +3,22 @@ package me.yamsafer.android_team.yamsafer_workshop.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.database.SnapshotParser;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import me.yamsafer.android_team.yamsafer_workshop.R;
+import me.yamsafer.android_team.yamsafer_workshop.adapter.MessagesRecyclerAdapter;
 import me.yamsafer.android_team.yamsafer_workshop.model.UserMessage;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
     private Button sendButton;
 
     private EditText messageEditText;
+
+    private RecyclerView mMessagesRecyclerView;
+
+    MessagesRecyclerAdapter adapter;
 
     private DatabaseReference mFirebaseDatabaseReference;
 
@@ -58,6 +68,38 @@ public class MainActivity extends AppCompatActivity {
 
         messageEditText = findViewById(R.id.message_id);
 
+        mMessagesRecyclerView = findViewById(R.id.messages_recycler);
+
+        SnapshotParser<UserMessage> snapshotParser = new SnapshotParser<UserMessage>() {
+
+            @Override
+            public UserMessage parseSnapshot(DataSnapshot snapshot) {
+
+                UserMessage userMessage = snapshot.getValue(UserMessage.class);
+
+                if (userMessage!= null){
+
+                    userMessage.setId(snapshot.getKey());
+                }
+                return userMessage;
+            }
+        };
+
+        FirebaseRecyclerOptions<UserMessage> options = new FirebaseRecyclerOptions
+                .Builder<UserMessage>()
+                .setQuery(mFirebaseDatabaseReference.child(MESSAGES_CHILD), snapshotParser)
+                .build();
+
+        adapter = new MessagesRecyclerAdapter(options);
+
+        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(this);
+
+        mLinearLayoutManager.setStackFromEnd(true);
+
+        mMessagesRecyclerView.setLayoutManager(mLinearLayoutManager);
+
+        mMessagesRecyclerView.setAdapter(adapter);
+
         sendButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -79,5 +121,25 @@ public class MainActivity extends AppCompatActivity {
                 mFirebaseDatabaseReference.child(MESSAGES_CHILD).push().setValue(userMessage);
             }
         });
+
+
+    }
+
+
+    @Override
+    protected void onPause() {
+
+        adapter.stopListening();
+
+        super.onPause();
+    }
+
+
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+
+        adapter.startListening();
     }
 }
