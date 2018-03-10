@@ -18,39 +18,6 @@ public class MessagesAdapter extends RecyclerView.Adapter <MessageItemViewHolder
 
     List<UserMessage> userMessages = new ArrayList<>();
 
-    public MessagesAdapter() {
-
-        UserMessage userMessage = new UserMessage();
-
-        userMessage.setImageUrl("https://avatarfiles.alphacoders.com/643/thumb-64385.png");
-
-        userMessage.setName("Pikatcho");
-
-        userMessage.setMessage("Pika Pika1");
-
-        userMessages.add(userMessage);
-
-        userMessage = new UserMessage();
-
-        userMessage.setImageUrl("https://avatarfiles.alphacoders.com/643/thumb-64385.png");
-
-        userMessage.setName("Pikatcho");
-
-        userMessage.setMessage("Pika Pika2");
-
-        userMessages.add(userMessage);
-
-        userMessage = new UserMessage();
-
-        userMessage.setImageUrl("https://avatarfiles.alphacoders.com/643/thumb-64385.png");
-
-        userMessage.setName("Pikatcho");
-
-        userMessage.setMessage("Pika Pika3");
-
-        userMessages.add(userMessage);
-    }
-
     @NonNull
     @Override
     public MessageItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -76,4 +43,14 @@ public class MessagesAdapter extends RecyclerView.Adapter <MessageItemViewHolder
 
         return userMessages.size();
     }
+
+    public void addUserMessage(UserMessage userMessage){
+
+        userMessages.add(userMessage);
+
+        notifyDataSetChanged();
+
+    }
+
+
 }
