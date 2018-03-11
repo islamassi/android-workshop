@@ -6,45 +6,45 @@ package me.yamsafer.android_team.yamsafer_workshop;
 
 public class UserMessage {
 
-    private String imageUrl;
+    private String photoUrl;
 
-    private String name;
+    private String messagesSender;
 
-    private String message;
+    private String text;
 
 
-    public String getImageUrl() {
+    public String getPhotoUrl() {
 
-        return imageUrl;
+        return photoUrl;
     }
 
 
-    public void setImageUrl(String imageUrl) {
+    public void setPhotoUrl(String photoUrl) {
 
-        this.imageUrl = imageUrl;
+        this.photoUrl = photoUrl;
     }
 
 
-    public String getName() {
+    public String getMessagesSender() {
 
-        return name;
+        return messagesSender;
     }
 
 
-    public void setName(String name) {
+    public void setMessagesSender(String messagesSender) {
 
-        this.name = name;
+        this.messagesSender = messagesSender;
     }
 
 
-    public String getMessage() {
+    public String getText() {
 
-        return message;
+        return text;
     }
 
 
-    public void setMessage(String message) {
+    public void setText(String text) {
 
-        this.message = message;
+        this.text = text;
     }
 }

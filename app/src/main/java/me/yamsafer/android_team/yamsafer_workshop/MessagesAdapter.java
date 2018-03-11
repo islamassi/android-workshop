@@ -22,31 +22,31 @@ public class MessagesAdapter extends RecyclerView.Adapter <MessageItemViewHolder
 
         UserMessage userMessage = new UserMessage();
 
-        userMessage.setImageUrl("https://avatarfiles.alphacoders.com/643/thumb-64385.png");
+        userMessage.setPhotoUrl("https://avatarfiles.alphacoders.com/643/thumb-64385.png");
 
-        userMessage.setName("Pikatcho");
+        userMessage.setMessagesSender("Pikatcho");
 
-        userMessage.setMessage("Pika Pika1");
-
-        userMessages.add(userMessage);
-
-        userMessage = new UserMessage();
-
-        userMessage.setImageUrl("https://avatarfiles.alphacoders.com/643/thumb-64385.png");
-
-        userMessage.setName("Pikatcho");
-
-        userMessage.setMessage("Pika Pika2");
+        userMessage.setText("Pika Pika1");
 
         userMessages.add(userMessage);
 
         userMessage = new UserMessage();
 
-        userMessage.setImageUrl("https://avatarfiles.alphacoders.com/643/thumb-64385.png");
+        userMessage.setPhotoUrl("https://avatarfiles.alphacoders.com/643/thumb-64385.png");
 
-        userMessage.setName("Pikatcho");
+        userMessage.setMessagesSender("Pikatcho");
 
-        userMessage.setMessage("Pika Pika3");
+        userMessage.setText("Pika Pika2");
+
+        userMessages.add(userMessage);
+
+        userMessage = new UserMessage();
+
+        userMessage.setPhotoUrl("https://avatarfiles.alphacoders.com/643/thumb-64385.png");
+
+        userMessage.setMessagesSender("Pikatcho");
+
+        userMessage.setText("Pika Pika3");
 
         userMessages.add(userMessage);
     }
