@@ -15,6 +15,19 @@ public class UserMessage {
     private String text;
 
 
+    public UserMessage() {
+
+    }
+
+
+    public UserMessage(String photoUrl, String messagesSender, String text) {
+
+        this.photoUrl = photoUrl;
+        this.messagesSender = messagesSender;
+        this.text = text;
+    }
+
+
     public String getPhotoUrl() {
 
         return photoUrl;
