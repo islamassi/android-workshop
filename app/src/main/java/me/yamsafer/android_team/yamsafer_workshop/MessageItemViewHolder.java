@@ -33,11 +33,11 @@ public class MessageItemViewHolder extends RecyclerView.ViewHolder {
 
     public void bind(UserMessage userMessage) {
 
-        Glide.with(itemView.getContext()).load(userMessage.getPhotoUrl()).into(avatarImage);
+        Glide.with(itemView.getContext()).load(userMessage.getImageUrl()).into(avatarImage);
 
-        name.setText(userMessage.getMessagesSender());
+        name.setText(userMessage.getSender());
 
-        message.setText(userMessage.getText());
+        message.setText(userMessage.getMessage());
 
     }
 }
