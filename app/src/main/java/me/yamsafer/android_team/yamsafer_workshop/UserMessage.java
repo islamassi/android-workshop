@@ -1,50 +1,66 @@
 package me.yamsafer.android_team.yamsafer_workshop;
 
+import com.google.firebase.database.PropertyName;
+
 /**
  * Created by islam on 3/10/18.
  */
 
 public class UserMessage {
 
-    private String photoUrl;
+    private String imageUrl;
 
-    private String messagesSender;
+    private String sender;
 
-    private String text;
+    private String message;
 
 
-    public String getPhotoUrl() {
+    public UserMessage() {
 
-        return photoUrl;
     }
 
 
-    public void setPhotoUrl(String photoUrl) {
+    public UserMessage(String imageUrl, String sender, String message) {
 
-        this.photoUrl = photoUrl;
+        this.imageUrl = imageUrl;
+        this.sender = sender;
+        this.message = message;
     }
 
 
-    public String getMessagesSender() {
+    @PropertyName("photoUrl")
+    public String getImageUrl() {
 
-        return messagesSender;
+        return imageUrl;
     }
 
+    @PropertyName("photoUrl")
+    public void setImageUrl(String imageUrl) {
 
-    public void setMessagesSender(String messagesSender) {
-
-        this.messagesSender = messagesSender;
+        this.imageUrl = imageUrl;
     }
 
+    @PropertyName("messagesSender")
+    public String getSender() {
 
-    public String getText() {
-
-        return text;
+        return sender;
     }
 
+    @PropertyName("messagesSender")
+    public void setSender(String sender) {
 
-    public void setText(String text) {
+        this.sender = sender;
+    }
 
-        this.text = text;
+    @PropertyName("text")
+    public String getMessage() {
+
+        return message;
+    }
+
+    @PropertyName("text")
+    public void setMessage(String text) {
+
+        this.message = text;
     }
 }
