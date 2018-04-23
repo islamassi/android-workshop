@@ -7,7 +7,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final String senderName = "YOUR-NAME";
 
-    private final String photoUrl = "https://www.google.ps/search?q=android+oreo+logo&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjNjrXomNDaAhVLEJoKHai0CtgQ_AUICigB&biw=1280&bih=659#imgrc=dHViqmhNgLv_KM:";
+    private final String photoUrl = "https://cdn-images-1.medium.com/max/324/1*XwETOHbx50_CT4tRbbBdog.png";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
