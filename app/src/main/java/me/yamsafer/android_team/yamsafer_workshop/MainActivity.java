@@ -13,6 +13,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final String senderName = "YOUR-NAME";
+
+    private final String photoUrl = "https://www.google.ps/search?q=android+oreo+logo&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjNjrXomNDaAhVLEJoKHai0CtgQ_AUICigB&biw=1280&bih=659#imgrc=dHViqmhNgLv_KM:";
+
     RecyclerView messagesRecycler;
 
     private DatabaseReference mFirebaseDatabase;
