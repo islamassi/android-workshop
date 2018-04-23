@@ -18,6 +18,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final String senderName = "Islam Assi";
+
+    private final String photoUrl = "https://cdn-images-1.medium.com/max/324/1*XwETOHbx50_CT4tRbbBdog.png";
+
     RecyclerView messagesRecycler;
 
     private DatabaseReference mFirebaseDatabase;
@@ -88,16 +92,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-                String photoUrl = null;
-
-                if (user.getPhotoUrl() != null){
-
-                    photoUrl = user.getPhotoUrl().toString();
-                }
-
-                UserMessage userMessage = new UserMessage(photoUrl, user.getDisplayName(), messageEditText.getText().toString());
+                UserMessage userMessage = new UserMessage(photoUrl, senderName, messageEditText.getText().toString());
 
                 mFirebaseDatabase.child(MESSAGES).push().setValue(userMessage);
 

@@ -1,6 +1,6 @@
 package me.yamsafer.android_team.yamsafer_workshop;
 
-import com.google.gson.annotations.SerializedName;
+import com.google.firebase.database.PropertyName;
 
 /**
  * Created by islam on 3/10/18.
@@ -8,11 +8,11 @@ import com.google.gson.annotations.SerializedName;
 
 public class UserMessage {
 
-    private String photoUrl;
+    private String imageUrl;
 
-    private String messagesSender;
+    private String sender;
 
-    private String text;
+    private String message;
 
 
     public UserMessage() {
@@ -20,46 +20,47 @@ public class UserMessage {
     }
 
 
-    public UserMessage(String photoUrl, String messagesSender, String text) {
+    public UserMessage(String imageUrl, String sender, String message) {
 
-        this.photoUrl = photoUrl;
-        this.messagesSender = messagesSender;
-        this.text = text;
+        this.imageUrl = imageUrl;
+        this.sender = sender;
+        this.message = message;
     }
 
 
-    public String getPhotoUrl() {
+    @PropertyName("photoUrl")
+    public String getImageUrl() {
 
-        return photoUrl;
+        return imageUrl;
     }
 
+    @PropertyName("photoUrl")
+    public void setImageUrl(String imageUrl) {
 
-    public void setPhotoUrl(String photoUrl) {
-
-        this.photoUrl = photoUrl;
+        this.imageUrl = imageUrl;
     }
 
+    @PropertyName("messagesSender")
+    public String getSender() {
 
-    public String getMessagesSender() {
-
-        return messagesSender;
+        return sender;
     }
 
+    @PropertyName("messagesSender")
+    public void setSender(String sender) {
 
-    public void setMessagesSender(String messagesSender) {
-
-        this.messagesSender = messagesSender;
+        this.sender = sender;
     }
 
+    @PropertyName("text")
+    public String getMessage() {
 
-    public String getText() {
-
-        return text;
+        return message;
     }
 
+    @PropertyName("text")
+    public void setMessage(String text) {
 
-    public void setText(String text) {
-
-        this.text = text;
+        this.message = text;
     }
 }
